@@ -39,7 +39,7 @@ const BankAccount = ({ name, balance, transactions }) =>
     <ItemsList title="Transactions" items={transactions} extractorFunc={transaction => transaction.name + ': '+ transaction.amount} />
   </fieldset>
 
-const BankDirectory = ({title, accounts}) =>
+const Banks = ({title, accounts}) =>
   <div>
     <header>
       <h1>{title}</h1>
@@ -51,6 +51,6 @@ const BankDirectory = ({title, accounts}) =>
     </div>
   </div>
 ReactDOM.render(
-  <BankDirectory accounts={bankData} title="First withdrawal only bank of Norway" />,
+  <Banks accounts={bankData} title="First withdrawal only bank of Norway" />,
   document.getElementById("bank-container")
 )
