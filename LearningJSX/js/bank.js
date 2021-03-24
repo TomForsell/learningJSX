@@ -44,11 +44,11 @@ const Banks = ({title, accounts}) =>
     <header>
       <h1>{title}</h1>
     </header>
-    <div>
+
       {accounts.map((account, i) =>
         <BankAccount key={i} {...account} />
       )}
-    </div>
+
   </div>
 ReactDOM.render(
   <Banks accounts={bankData} title="First withdrawal only bank of Norway" />,
